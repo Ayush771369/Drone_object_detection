@@ -1,0 +1,99 @@
+/* Main container to center content on the page */
+.container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  min-height: 100vh;       /* Make container take full screen height */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* The wrapper for all your content */
+.content-wrapper {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+}
+
+/* Header Section */
+.header-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #555;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.upload-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between icon and text */
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.file-specs {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin-top: 0.5rem;
+}
+
+
+/* Processing Section */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.step {
+  margin-bottom: 2.5rem;
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.upload-details {
+  color: #e0e0e0;
+}
+
+.upload-details p {
+    margin: 0.5rem 0;
+}
+
+.placeholder-text {
+  color: #b3b3b3;
+}
+
+/* Styling the file input */
+input[type="file"] {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #b3b3b3;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #555;
+  color: white;
+  padding: 8px 16px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #666;
+}
