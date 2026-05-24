@@ -75,7 +75,7 @@ function UploadDetection() {
       // ------------------------------------------
 
       const response = await fetch(
-        "http://127.0.0.1:8000/detect/",
+        `${import.meta.env.VITE_BACKEND_URL}/detect-frame/`,
         {
           method: "POST",
           body: formData,

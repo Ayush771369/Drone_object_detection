@@ -117,7 +117,7 @@ export default function LiveDetection() {
       formData.append("file", blob, "frame.jpg");
 
       try {
-        const res = await fetch("http://localhost:8000/detect-frame/", {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/detect-frame/`, {
           method: "POST",
           body: formData,
         });
