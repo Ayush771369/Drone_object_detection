@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import UploadDetection from "./pages/UploadDetection";
+import UploadDetection from "./pages/uploadDetection";
 import LiveDetection from "./pages/LiveDetection";
 
 import "./App.css";
