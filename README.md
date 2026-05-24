@@ -6,7 +6,6 @@
 
 ### AI-Powered Video Analytics using YOLOv8, FastAPI, and React
 
-<img width="100%" alt="SkyVision Banner" src="https://raw.githubusercontent.com/github/explore/main/topics/artificial-intelligence/artificial-intelligence.png"/>
 
 <br/>
 
