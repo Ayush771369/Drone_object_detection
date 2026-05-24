@@ -6,132 +6,142 @@
 
 ### AI-Powered Video Analytics using YOLOv8, FastAPI, and React
 
+<img width="100%" alt="SkyVision Banner" src="https://raw.githubusercontent.com/github/explore/main/topics/artificial-intelligence/artificial-intelligence.png"/>
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge&logo=fastapi)
+![React](https://img.shields.io/badge/React-Frontend-61dafb?style=for-the-badge&logo=react)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-ObjectDetection-orange?style=for-the-badge)
+![OpenCV](https://img.shields.io/badge/OpenCV-ComputerVision-red?style=for-the-badge&logo=opencv)
+
 </div>
 
 ---
 
 # 📌 Overview
 
-SkyVision AI is a full-stack real-time computer vision platform capable of:
+SkyVision AI is a full-stack real-time computer vision platform designed for:
 
-- 🎥 Upload-based video object detection
-- 📷 Real-time webcam detection
-- ⚡ Live YOLOv8 inference
-- 🧠 AI-powered object recognition
-- 🚘 Vehicle and pedestrian detection
-- 🌐 Modern frontend dashboard
-- ☁️ Deployable cloud architecture
+- 🎥 Video-based object detection
+- 📷 Real-time webcam surveillance
+- 🚘 Vehicle & pedestrian analytics
+- 🧠 AI-powered monitoring systems
+- 🌐 Modern AI dashboard interfaces
+- ☁️ Deployable cloud inference pipelines
 
-The system combines:
+The project combines:
 
 - **YOLOv8** for object detection
-- **FastAPI** for backend inference APIs
-- **React + Vite** for frontend UI
-- **OpenCV** for image/video processing
-- **FFmpeg** for browser-compatible video conversion
+- **FastAPI** for backend APIs
+- **React + Vite** for frontend architecture
+- **OpenCV** for video/image processing
+- **FFmpeg** for browser-compatible MP4 encoding
 
 This project simulates the architecture used in:
 
 - Smart surveillance systems
-- AI traffic monitoring systems
+- Traffic monitoring systems
 - Drone-based analytics platforms
-- Real-time monitoring applications
-- Intelligent CCTV systems
+- AI CCTV systems
+- Intelligent monitoring dashboards
 
 ---
 
 # ✨ Features
 
-## 🎬 Video Upload Detection
+# 🎬 Upload Video Detection
 
 Upload drone footage or surveillance videos and process them using YOLOv8.
 
-### Supported Features
+## Supported Features
 
 - MP4 video upload
-- Real-time progress feedback
-- AI object detection
-- Processed video rendering
-- Browser-compatible MP4 conversion
-- Bounding boxes and confidence scores
+- Real-time processing
+- AI-powered detections
+- Bounding boxes & labels
+- Browser-compatible MP4 rendering
+- Downloadable processed output
 
 ---
 
-## 📷 Live Webcam Detection
+# 📷 Live Webcam Detection
 
 Perform real-time object detection directly from webcam feed.
 
-### Live Detection Features
+## Live Detection Features
 
 - Webcam access
 - Continuous frame capture
 - Real-time inference
-- Live AI detections
-- Dynamic processed frame rendering
+- Dynamic object detection
 - Low-latency backend communication
+- Live AI dashboard interface
 
 ---
 
-## 🎨 Modern AI Dashboard UI
+# 🎨 Modern AI Dashboard
 
 The frontend includes:
 
 - Futuristic cyberpunk UI
-- Glassmorphism design
-- Responsive layout
+- Glassmorphism cards
+- Neon AI styling
+- Responsive layouts
 - Animated gradients
-- AI-themed interface
-- Live detection panels
+- Real-time panels
 - Interactive controls
 
 ---
 
 # 🧠 Technologies Used
 
-## Frontend
+# Frontend
 
 | Technology | Purpose |
 |---|---|
 | React | Frontend framework |
-| Vite | Fast development bundler |
-| CSS3 | Styling and animations |
+| Vite | Fast bundler |
+| CSS3 | Styling & animations |
 | Axios | API communication |
 | Framer Motion | UI animations |
 
 ---
 
-## Backend
+# Backend
 
 | Technology | Purpose |
 |---|---|
 | FastAPI | Backend API server |
 | Uvicorn | ASGI server |
 | OpenCV | Video processing |
-| YOLOv8 | Object detection |
-| NumPy | Image array processing |
-| FFmpeg | Video encoding |
+| NumPy | Array processing |
+| FFmpeg | MP4 encoding |
+| Python | Core backend logic |
 
 ---
 
-## AI / Computer Vision
+# AI / Computer Vision
 
 | Technology | Purpose |
 |---|---|
-| YOLOv8n | Real-time lightweight detection |
-| YOLOv8m | Higher accuracy detection |
-| COCO Dataset | Pretrained detection classes |
+| YOLOv8n | Fast lightweight detection |
+| YOLOv8m | Better accuracy |
+| COCO Dataset | Pretrained classes |
+| Ultralytics | YOLO framework |
 
 ---
 
-# 🏗️ Project Architecture
+# 🏗️ System Architecture
 
 ```text
-Frontend (React)
-        ↓
-FastAPI Backend
-        ↓
+Frontend (React + Vite)
+            ↓
+FastAPI Backend Server
+            ↓
 YOLOv8 Inference Pipeline
-        ↓
-OpenCV Processing
-        ↓
-Processed Output
+            ↓
+OpenCV Video Processing
+            ↓
+Processed Frames / Videos
