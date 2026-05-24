@@ -1,13 +1,14 @@
 # main.py
 
-from fastapi import FastAPI, UploadFile, File, BackgroundTasks
-from fastapi.responses import FileResponse
-from fastapi.middleware.cors import CORSMiddleware
-
+from fastapi import FastAPI, UploadFile, File, BackgroundTasks  # type: ignore
+from fastapi.responses import FileResponse  # type: ignore
+from fastapi.middleware.cors import CORSMiddleware # type: ignore
+from fastapi.responses import StreamingResponse # type: ignore
+import numpy as np # type: ignore
 from pipeline import Pipeline
 
 import tempfile
-import cv2
+import cv2 # type: ignore
 import os
 import subprocess
 
@@ -255,4 +256,18 @@ async def get_video():
     return FileResponse(
         "output.mp4",
         media_type="video/mp4"
+    )
+
+@app.post("/detect-frame/")
+async def detect_frame(file: UploadFile = File(...)):
+    # Implementation for frame detection
+    contents = await file.read()
+    np_array = np.frombuffer(contents, np.uint8)
+    frame = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
+    results = pipeline(frame)
+    annotated_frame = results[0].plot()
+    _, buffer = cv2.imencode('.jpg', annotated_frame)
+    return StreamingResponse(
+        iter([buffer.tobytes()]),
+        media_type="image/jpeg"
     )
