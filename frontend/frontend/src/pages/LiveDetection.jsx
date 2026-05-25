@@ -100,15 +100,18 @@ export default function LiveDetection() {
   }, []);
 
   // ── Frame capture + send ───────────────────────────────────────────────────
+  const isSendingRef = useRef(false);
   const captureAndSend = useCallback(async () => {
+    if (isSendingRef.current) return;
+    isSendingRef.current = true;
     const video = videoRef.current;
     const canvas = canvasRef.current;
     const detCanvas = detectionCanvasRef.current;
     if (!video || !canvas || !detCanvas || video.readyState < 2) return;
 
     const ctx = canvas.getContext("2d");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
+    canvas.width = 640;
+    canvas.height = 480;
     ctx.drawImage(video, 0, 0);
 
     canvas.toBlob(async (blob) => {
@@ -147,6 +150,8 @@ export default function LiveDetection() {
         img.src = url;
       } catch (e) {
         console.error("Detection error:", e);
+      } finally {
+        isSendingRef.current = false;
       }
     }, "image/jpeg");
   }, []);
@@ -160,7 +165,7 @@ export default function LiveDetection() {
       setDetectionStatus("STANDBY");
       setFps(0);
     } else {
-      intervalRef.current = setInterval(captureAndSend, 100);
+      intervalRef.current = setInterval(captureAndSend, 1000);
       setIsDetecting(true);
       setDetectionStatus("ACTIVE");
     }
